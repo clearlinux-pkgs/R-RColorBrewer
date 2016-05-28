@@ -4,7 +4,7 @@
 #
 Name     : R-RColorBrewer
 Version  : 1.1
-Release  : 22
+Release  : 23
 URL      : http://cran.r-project.org/src/contrib/RColorBrewer_1.1-2.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/RColorBrewer_1.1-2.tar.gz
 Summary  : ColorBrewer Palettes
@@ -23,13 +23,20 @@ No detailed description available
 %install
 rm -rf %{buildroot}
 export LANG=C
+export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
 R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library RColorBrewer
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=intel.com,localhost
+export no_proxy=localhost
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library RColorBrewer
 
