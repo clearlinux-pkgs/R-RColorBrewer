@@ -1,0 +1,14 @@
+# This file contains recursive sources that require this package
+R-GGally
+R-NMF
+R-adegraphics
+R-clustMixType
+R-corrplot
+R-hdrcde
+R-latticeExtra
+R-mstate
+R-pheatmap
+R-plotly
+R-rasterVis
+R-scales
+R-sp
