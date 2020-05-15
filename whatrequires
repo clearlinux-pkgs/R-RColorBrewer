@@ -4,12 +4,12 @@ R-NMF
 R-adegraphics
 R-clustMixType
 R-corrplot
-R-haplo.stats
 R-hdrcde
 R-latticeExtra
+R-leaflet
 R-mstate
 R-pheatmap
 R-plotly
+R-rasterVis
 R-scales
-R-sp
-R-viridis
+R-wordcloud
