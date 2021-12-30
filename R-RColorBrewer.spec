@@ -4,7 +4,7 @@
 #
 Name     : R-RColorBrewer
 Version  : 1.1.2
-Release  : 74
+Release  : 75
 URL      : https://cran.r-project.org/src/contrib/RColorBrewer_1.1-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RColorBrewer_1.1-2.tar.gz
 Summary  : ColorBrewer Palettes
