@@ -1,9 +1,9 @@
 # This file contains recursive sources that require this package
+R-DiagrammeR
 R-GGally
 R-NMF
 R-adegraphics
 R-clustMixType
-R-corrplot
 R-hdrcde
 R-latticeExtra
 R-leaflet
@@ -12,4 +12,3 @@ R-pheatmap
 R-plotly
 R-rasterVis
 R-scales
-R-wordcloud
